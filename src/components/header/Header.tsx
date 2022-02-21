@@ -1,13 +1,12 @@
 import { useAppDispatch } from "redux/hooks";
 import styled from "styled-components";
 import { next, reset } from "redux/cellsSlice/cellsSlice";
-import { BOARD_COLS } from "shared/constants";
 
 const Row = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: ${BOARD_COLS * 5}rem;
+  width: 30rem;
   height: 4rem;
 `;
 

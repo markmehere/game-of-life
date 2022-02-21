@@ -2,6 +2,7 @@ import { useAppDispatch } from "redux/hooks";
 import styled from "styled-components";
 import { toggle } from "redux/cellsSlice/cellsSlice";
 import { color } from "shared/colors";
+import { BOARD_COLS } from "shared/constants";
 
 interface ButtonStyleProps {
   alive: boolean;
@@ -11,8 +12,8 @@ const CellButton = styled.button<ButtonStyleProps>`
   background-color: ${(props) =>
     props.alive ? color.cellAlive : color.cellDead};
   border: 1px solid white;
-  width: 5rem;
-  height: 5rem;
+  width: ${30 / BOARD_COLS}rem;
+  height: ${30 / BOARD_COLS}rem;
 `;
 
 export interface CellProps {

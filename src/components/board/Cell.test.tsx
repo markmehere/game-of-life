@@ -2,9 +2,13 @@ import { screen as s, render } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { Provider } from "react-redux";
 import { store } from "redux/store";
-import { CellBoard } from "shared/types";
 import { Cell } from "./Cell";
 import * as hooks from "redux/hooks";
+
+jest.mock("shared/constants", () => ({
+  BOARD_COLS: 5,
+  BOARD_ROWS: 3,
+}));
 
 describe("<Cell />", () => {
   it("matches snapshot when dead", async () => {

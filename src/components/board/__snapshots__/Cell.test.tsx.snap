@@ -6,7 +6,7 @@ exports[`<Cell /> matches snapshot when alive 1`] = `
     <button
       aria-label="Cell 1,2"
       aria-pressed="true"
-      class="sc-bdvvtL GhYAm"
+      class="sc-bdvvtL ipWMZu"
     />
   </div>
 </body>
@@ -18,7 +18,7 @@ exports[`<Cell /> matches snapshot when dead 1`] = `
     <button
       aria-label="Cell 1,2"
       aria-pressed="false"
-      class="sc-bdvvtL daBPwh"
+      class="sc-bdvvtL jrqIUZ"
     />
   </div>
 </body>

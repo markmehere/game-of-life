@@ -2,11 +2,10 @@ import { useAppSelector } from "redux/hooks";
 import styled from "styled-components";
 import { selectBoard } from "redux/cellsSlice/cellsSlice";
 import { Cell } from "components/board/Cell";
-import { BOARD_COLS } from "shared/constants";
 
 const Container = styled.div`
   border: 2px solid black;
-  width: ${BOARD_COLS * 5}rem;
+  width: 30rem;
 `;
 
 const Row = styled.div``;
