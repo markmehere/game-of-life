@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header /> matches snapshot 1`] = `
+<body>
+  <div>
+    <div
+      class="sc-bdvvtL hQzVqw"
+    >
+      <button
+        aria-label="Reset"
+        class="sc-gsDKAQ hYtlMt"
+      >
+        Reset
+      </button>
+      <button
+        aria-label="Next generation"
+        class="sc-gsDKAQ hYtlMt"
+      >
+        Next generation
+      </button>
+    </div>
+  </div>
+</body>
+`;

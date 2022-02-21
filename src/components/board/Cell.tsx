@@ -27,6 +27,8 @@ export function Cell({ row, col, value }: CellProps) {
   return (
     <CellButton
       alive={value}
+      aria-pressed={value}
+      aria-label={`Cell ${row},${col}`}
       onClick={() => dispatch(toggle({ r: row, c: col }))}
     />
   );
