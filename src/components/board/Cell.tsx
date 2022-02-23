@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { toggle } from "redux/cellsSlice/cellsSlice";
 import { color } from "shared/colors";
 import { BOARD_COLS } from "shared/constants";
+import { useCallback } from "react";
 
 interface ButtonStyleProps {
   alive: boolean;
@@ -24,13 +25,17 @@ export interface CellProps {
 
 export function Cell({ row, col, value }: CellProps) {
   const dispatch = useAppDispatch();
+  const onClick = useCallback(
+    () => dispatch(toggle({ r: row, c: col })),
+    [dispatch]
+  );
 
   return (
     <CellButton
       alive={value}
       aria-pressed={value}
       aria-label={`Cell ${row},${col}`}
-      onClick={() => dispatch(toggle({ r: row, c: col }))}
+      onClick={onClick}
     />
   );
 }

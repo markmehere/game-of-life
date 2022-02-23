@@ -1,6 +1,7 @@
 import { useAppDispatch } from "redux/hooks";
 import styled from "styled-components";
 import { next, reset } from "redux/cellsSlice/cellsSlice";
+import { useCallback } from "react";
 
 const Row = styled.div`
   display: flex;
@@ -16,13 +17,15 @@ const Button = styled.button`
 
 export function Header() {
   const dispatch = useAppDispatch();
+  const onReset = useCallback(() => dispatch(reset()), [dispatch]);
+  const onNext = useCallback(() => dispatch(next()), [dispatch]);
 
   return (
     <Row>
-      <Button aria-label="Reset" onClick={() => dispatch(reset())}>
+      <Button aria-label="Reset" onClick={onReset}>
         Reset
       </Button>
-      <Button aria-label="Next generation" onClick={() => dispatch(next())}>
+      <Button aria-label="Next generation" onClick={onNext}>
         Next generation
       </Button>
     </Row>
