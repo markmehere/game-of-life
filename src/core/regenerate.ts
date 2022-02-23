@@ -18,7 +18,7 @@ export function getNeighboursAlive(board: CellBoard, point: CellPoint): number {
 
   for (let r = point.r - 1; r <= point.r + 1; r++) {
     for (let c = point.c - 1; c <= point.c + 1; c++) {
-      if (!(r == point.r && c === point.c) && board[r] && board[r][c]) count++;
+      if (!(r === point.r && c === point.c) && board[r] && board[r][c]) count++;
     }
   }
 
