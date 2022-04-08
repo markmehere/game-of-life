@@ -1,3 +1,4 @@
+import React from "react";
 import { Header } from "./components/header/Header";
 import styled from "styled-components";
 import { Board } from "components/board/Board";

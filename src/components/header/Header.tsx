@@ -1,3 +1,4 @@
+import React from "react";
 import { useAppDispatch } from "redux/hooks";
 import styled from "styled-components";
 import { next, reset } from "redux/cellsSlice/cellsSlice";
@@ -25,8 +26,8 @@ export function Header() {
       <Button aria-label="Reset" onClick={onReset}>
         Reset
       </Button>
-      <Button aria-label="Next generation" onClick={onNext}>
-        Next generation
+      <Button aria-label="Generation" onClick={onNext}>
+        Generation
       </Button>
     </Row>
   );

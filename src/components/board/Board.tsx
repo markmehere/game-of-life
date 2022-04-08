@@ -1,3 +1,4 @@
+import React from "react";
 import { useAppSelector } from "redux/hooks";
 import styled from "styled-components";
 import { selectBoard } from "redux/cellsSlice/cellsSlice";

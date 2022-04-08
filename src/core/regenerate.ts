@@ -27,8 +27,10 @@ export function getNeighboursAlive(board: CellBoard, point: CellPoint): number {
 
 export function getWrappedSiblingNeigboursAlive(
   board: CellBoard,
-  { r, c }: CellPoint
+  cp: CellPoint
 ) {
+  const r = cp.r,
+    c = cp.c;
   const boardRows = board.length;
   const boardCols = board[0].length;
   const rowEdge = r === 0 || r === boardRows - 1;

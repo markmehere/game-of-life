@@ -1,3 +1,4 @@
+import React from "react";
 import { useAppDispatch } from "redux/hooks";
 import styled from "styled-components";
 import { toggle } from "redux/cellsSlice/cellsSlice";
@@ -23,7 +24,10 @@ export interface CellProps {
   col: number;
 }
 
-export function Cell({ row, col, value }: CellProps) {
+export function Cell(cellProps: CellProps) {
+  const row = cellProps.row;
+  const col = cellProps.col;
+  const value = cellProps.value;
   const dispatch = useAppDispatch();
   const onClick = useCallback(
     () => dispatch(toggle({ r: row, c: col })),

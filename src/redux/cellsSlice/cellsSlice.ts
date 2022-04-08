@@ -38,7 +38,9 @@ export const cellsSlice = createSlice({
 
 export const selectBoard = (state: RootState) => state.cells.board;
 
-export const { toggle, revise, reset } = cellsSlice.actions;
+export const toggle = cellsSlice.actions.toggle;
+export const revise = cellsSlice.actions.revise;
+export const reset = cellsSlice.actions.reset;
 
 export const next = (): AppThunk => (dispatch, getState) => {
   const board = getState().cells.board;
